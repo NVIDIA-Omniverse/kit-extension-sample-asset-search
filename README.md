@@ -5,24 +5,14 @@ This is a sample going through how to add asset content to Omniverse's Asset Sto
 ![as_png_1](images/assetsearch_1.png)
 
 # Table of Contents
-- Step 1: Clone Repository
+- Step 1: Add Base Extension
+    - Step 1.1: Add Extension Through Github
+    - Step 1.2: Open in Visual Studio Code
 - Step 2: Inputting Provider Information
-    - Step 2.1: 
-- Step 3: 
-    - Step 3.1: 
-    - Step 3.2: 
-    - Step 3.3: 
-- Step 4: 
-    - Step 4.1: 
-    - Step 4.2: 
-- Step 5: Conclusion
-
-
-> 💡 **Tip:** How to make a tip 
-
-> 📝 **Note:** How to make a note
-
-> :warning: **Tip:** How to make a warning using Markdown Emoji
+    - Step 2.1: Update Basic Information
+    - Step 2.2: Update Search criteria
+    - Step 2.3: Update AssetModel Creation
+    - Step 2.4: Uncomment and test
 
 ## Step 1: Add Base Extension
 
