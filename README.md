@@ -1,7 +1,7 @@
 # Asset Provider Sample
 
 
-## Adding one of those Extension
+## Adding the Extension Template
 
 To add a those extensions to your Omniverse app:
 1. Go into: Extension Manager -> Gear Icon -> Extension Search Path
