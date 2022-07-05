@@ -1,5 +1,12 @@
 # Asset Provider Sample
 
+
+## Adding one of those Extension
+
+To add a those extensions to your Omniverse app:
+1. Go into: Extension Manager -> Gear Icon -> Extension Search Path
+2. Add this as a search path: `git://github.com/NVIDIA-Omniverse/kit-extension-sample-asset-search?branch=main&dir=exts`
+
 This is a sample going through how to add asset content to Omniverse's Asset Store.
 
 ![as_png_1](images/assetsearch_1.png)
