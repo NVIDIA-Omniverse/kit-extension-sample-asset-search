@@ -3,7 +3,7 @@
 version = "1.0.0"
 
 # The title and description fields are primarily for displaying extension info in UI
-title = "Asset Provider Extension Template"
+title = "Asset Provider Search Extension Template"
 description="Template for asset providers to follow"
 
 # Path (relative to the root) or content of readme markdown file for UI.
@@ -16,7 +16,7 @@ repository = ""
 category = "Example"
 
 # Keywords for the extension
-keywords = ["kit", "example"]
+keywords = ["kit", "example", "search", "asset"]
 
 
 # Use omni.ui to build simple UI
@@ -25,4 +25,4 @@ keywords = ["kit", "example"]
 
 # Main python module this extension provides, it will be publicly available as "import omni.hello.world".
 [[python.module]]
-name = "omni.assetprovider.template"
+name = "omni.example.asset_provider"
