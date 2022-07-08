@@ -6,7 +6,7 @@
 This extension is a template for connecting a search API for assets to Omniverse's *Asset Browser*.
 
 ### [README](exts/omni.example.asset_provider/)
-See the [README for this extension](exts/omni.example.ui_gradient_window/) to learn more about it including how to use it.
+See the [README for this extension](exts/omni.example.asset_provider/) to learn more about it including how to use it.
 
 ## Adding one of those Extension
 
