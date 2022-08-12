@@ -25,4 +25,4 @@ keywords = ["kit", "example", "search", "asset"]
 
 # Main python module this extension provides, it will be publicly available as "import omni.hello.world".
 [[python.module]]
-name = "omni.example.asset_provider"
+name = "omni.assetprovider.template"
