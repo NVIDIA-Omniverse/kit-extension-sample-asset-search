@@ -60,6 +60,11 @@ class TemplateAssetProvider(BaseAssetStore):
         if search_criteria.page.number:
             params["page"] = search_criteria.page.number
 
+        # Setting for max number of items per page 
+        if search_criteria.page.size:
+            params["page_size"] = search_criteria.page.size
+
+
         items = []
 
 
@@ -89,7 +94,12 @@ class TemplateAssetProvider(BaseAssetStore):
                 )
             )
 
-        return (assets, False)
+        # Are there more assets that we can load?
+        more = True
+        if search_criteria.page.size and len(assets) < search_criteria.page.size:
+            more = False
+
+        return (assets, more)
 
     def provider(self) -> ProviderModel:
         """Return provider info"""

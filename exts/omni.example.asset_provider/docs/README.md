@@ -8,12 +8,28 @@ This is a sample going through how to add asset content to Omniverse's Asset Sto
 
 To start the base extension needs to be inside of Omniverse. 
 
-### Step 1.1: Add Extension Through Github
+### Step 1.1: Add Extension
 
-To add the extension to your Omniverse app:
+To add the extension to your Omniverse app there are two ways:
 
- #### Step 1.1.1 **Go** into: Extension Manager -> Gear Icon -> Extension Search Path
- #### Step 1.1.2 Add this as a search path: git://github.com/NVIDIA-Omniverse/kit-extension-sample-asset-search?branch=main&dir=exts
+#### Add via GitHub Link
+ #### Step 1.1.1a **Go** into: Extension Manager -> Gear Icon -> Extension Search Path
+ #### Step 1.1.2a Add this as a search path: git://github.com/NVIDIA-Omniverse/kit-extension-sample-asset-search?branch=main&dir=exts
+#### Download Folder from GitHub
+ #### Step 1.1.1b **Click** on Code 
+ #### Step 1.1.2b **Select** download zip
+
+![as_png_3](images/assetsearch_3.png)
+
+ #### Step 1.1.3b **Save** the Folder 
+ #### Step 1.1.4b **Extract** the folder's contents
+ #### Step 1.1.5b **Locate** the `exts` directory in the extracted folder
+ #### Step 1.1.6b **Copy** the directory path
+ An example of what the directory path would look like: "c:/users/username/documents/kit-extension-sample-asset-search/exts"
+ #### Step 1.1.7b With Code open**Go** into: Extension Manager -> Gear Icon -> Extension Search Path
+ #### Step 1.1.8b **Add** the copied directory path as a search path
+
+
 
 ### Step 1.2 Open in Visual Studio Code
 
@@ -90,6 +106,10 @@ class TemplateAssetProvider(BaseAssetStore):
         if search_criteria.page.number:
             params["page"] = search_criteria.page.number
 
+        # Setting for max number of items per page 
+        if search_criteria.page.size:
+            params["page_size"] = search_criteria.page.size
+
         items = []
 
 
@@ -119,7 +139,12 @@ class TemplateAssetProvider(BaseAssetStore):
                 )
             )
 
-        return (assets, False)
+        # Are there more assets that we can load?
+        more = True
+        if search_criteria.page.size and len(assets) < search_criteria.page.size:
+            more = False
+
+        return (assets, more)
 
     def provider(self) -> ProviderModel:
         """Return provider info"""
